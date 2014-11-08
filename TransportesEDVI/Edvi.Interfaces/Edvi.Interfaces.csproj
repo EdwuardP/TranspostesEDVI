@@ -40,9 +40,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\IClienteService.cs" />
+    <Compile Include="Service\IGuiaRemisionService.cs" />
+    <Compile Include="Service\IRutaService.cs" />
+    <Compile Include="Service\IVehiculoService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Service\" />
+    <ProjectReference Include="..\Edvi.Models\Edvi.Models.csproj">
+      <Project>{2fb1a64e-71a0-433e-ac57-0b4d177c0594}</Project>
+      <Name>Edvi.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

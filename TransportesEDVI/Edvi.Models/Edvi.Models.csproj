@@ -46,11 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Model\Cliente.cs" />
+    <Compile Include="Model\GuiaRemision.cs" />
+    <Compile Include="Model\Ruta.cs" />
+    <Compile Include="Model\Vehiculo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />

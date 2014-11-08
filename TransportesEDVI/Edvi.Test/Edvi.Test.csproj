@@ -63,6 +63,28 @@
       <SubType>Designer</SubType>
     </None>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Edvi.DB\Edvi.DB.csproj">
+      <Project>{fc4eaf4b-4ac5-4a21-9a99-6f25984ea845}</Project>
+      <Name>Edvi.DB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Edvi.Interfaces\Edvi.Interfaces.csproj">
+      <Project>{fa96f7b9-9aaf-4c65-a1b5-5422aca08346}</Project>
+      <Name>Edvi.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Edvi.Models\Edvi.Models.csproj">
+      <Project>{2fb1a64e-71a0-433e-ac57-0b4d177c0594}</Project>
+      <Name>Edvi.Models</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Edvi.Services\Edvi.Services.csproj">
+      <Project>{55f8eee1-4d98-4a91-af44-7769fdbcf564}</Project>
+      <Name>Edvi.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Edvi.Web\Edvi.Web.csproj">
+      <Project>{2490557f-3d45-4f27-885c-62b4842a064e}</Project>
+      <Name>Edvi.Web</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

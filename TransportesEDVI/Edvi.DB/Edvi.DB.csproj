@@ -74,14 +74,27 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DB\Database.cs" />
+    <Compile Include="Map\ClienteMap.cs" />
+    <Compile Include="Map\GuiaRemisionMap.cs" />
+    <Compile Include="Map\RutaMap.cs" />
+    <Compile Include="Map\VehiculoMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DB\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Edvi.Interfaces\Edvi.Interfaces.csproj">
+      <Project>{fa96f7b9-9aaf-4c65-a1b5-5422aca08346}</Project>
+      <Name>Edvi.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Edvi.Models\Edvi.Models.csproj">
+      <Project>{2fb1a64e-71a0-433e-ac57-0b4d177c0594}</Project>
+      <Name>Edvi.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

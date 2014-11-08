@@ -13,7 +13,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Edvi.Services", "Edvi.Servi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Edvi.Test", "Edvi.Test\Edvi.Test.csproj", "{ADCF67EB-14DD-43AB-8F27-7FCB3CD3DD57}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Edvi", "Edvi\Edvi.csproj", "{5A79403C-387C-4A7B-B49A-625A2B85B1D9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Edvi.Web", "Edvi.Web\Edvi.Web.csproj", "{2490557F-3D45-4F27-885C-62B4842A064E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,10 +41,10 @@ Global
 		{ADCF67EB-14DD-43AB-8F27-7FCB3CD3DD57}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ADCF67EB-14DD-43AB-8F27-7FCB3CD3DD57}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ADCF67EB-14DD-43AB-8F27-7FCB3CD3DD57}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5A79403C-387C-4A7B-B49A-625A2B85B1D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5A79403C-387C-4A7B-B49A-625A2B85B1D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5A79403C-387C-4A7B-B49A-625A2B85B1D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5A79403C-387C-4A7B-B49A-625A2B85B1D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2490557F-3D45-4F27-885C-62B4842A064E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2490557F-3D45-4F27-885C-62B4842A064E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2490557F-3D45-4F27-885C-62B4842A064E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2490557F-3D45-4F27-885C-62B4842A064E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

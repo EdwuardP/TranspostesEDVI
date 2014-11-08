@@ -47,9 +47,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\ClienteService.cs" />
+    <Compile Include="Service\GuiaRemisionService.cs" />
+    <Compile Include="Service\RutaService.cs" />
+    <Compile Include="Service\VehiculoService.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Service\" />
+    <ProjectReference Include="..\Edvi.DB\Edvi.DB.csproj">
+      <Project>{fc4eaf4b-4ac5-4a21-9a99-6f25984ea845}</Project>
+      <Name>Edvi.DB</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Edvi.Interfaces\Edvi.Interfaces.csproj">
+      <Project>{fa96f7b9-9aaf-4c65-a1b5-5422aca08346}</Project>
+      <Name>Edvi.Interfaces</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Edvi.Models\Edvi.Models.csproj">
+      <Project>{2fb1a64e-71a0-433e-ac57-0b4d177c0594}</Project>
+      <Name>Edvi.Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
