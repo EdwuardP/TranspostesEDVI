@@ -15,12 +15,12 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyCulture("")]
 
 // Si establece ComVisible como false, los tipos de este ensamblado no estarán visibles 
-// para los componentes COM. Si necesita obtener acceso a un tipo de este ensamblado desde 
+// para los componentes COM.  Si necesita obtener acceso a un tipo de este ensamblado desde 
 // COM, establezca el atributo ComVisible como true en este tipo.
 [assembly: ComVisible(false)]
 
 // El siguiente GUID sirve como identificador de typelib si este proyecto se expone a COM
-[assembly: Guid("d484797d-9dd6-4dfe-a9a9-6b0e4d523d74")]
+[assembly: Guid("c3e023ab-11f8-440b-afb9-693a61bc59af")]
 
 // La información de versión de un ensamblado consta de los cuatro valores siguientes:
 //

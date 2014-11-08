@@ -5,22 +5,22 @@ using System.Runtime.InteropServices;
 // La información general sobre un ensamblado se controla mediante el siguiente 
 // conjunto de atributos. Cambie estos atributos para modificar la información
 // asociada con un ensamblado.
-[assembly: AssemblyTitle("Edvi.Models")]
+[assembly: AssemblyTitle("Edvi.DB")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Edvi.Models")]
+[assembly: AssemblyProduct("Edvi.DB")]
 [assembly: AssemblyCopyright("Copyright ©  2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
 // Si establece ComVisible como false, los tipos de este ensamblado no estarán visibles 
-// para los componentes COM. Si necesita obtener acceso a un tipo de este ensamblado desde 
+// para los componentes COM.  Si necesita obtener acceso a un tipo de este ensamblado desde 
 // COM, establezca el atributo ComVisible como true en este tipo.
 [assembly: ComVisible(false)]
 
 // El siguiente GUID sirve como identificador de typelib si este proyecto se expone a COM
-[assembly: Guid("1e554a8f-5090-42e2-93a2-c06a8150d176")]
+[assembly: Guid("462ab1a1-07cd-4aff-91c7-1555371b60a9")]
 
 // La información de versión de un ensamblado consta de los cuatro valores siguientes:
 //
