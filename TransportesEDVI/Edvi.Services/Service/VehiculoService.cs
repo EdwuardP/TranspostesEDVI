@@ -9,9 +9,9 @@ namespace Edvi.Services.Service
 {
     public class VehiculoService:IVehiculoService
     {
-       private readonly Database database;
+       private readonly Databases database;
 
-       public VehiculoService(Database database)
+       public VehiculoService(Databases database)
         {
             this.database = database;
         }

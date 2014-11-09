@@ -9,9 +9,9 @@ namespace Edvi.Services.Service
 {
     public class RutaService:IRutaService
     {
-       private readonly Database database;
+       private readonly Databases database;
 
-       public RutaService(Database database)
+       public RutaService(Databases database)
         {
             this.database = database;
         }

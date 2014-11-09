@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,12 +10,12 @@ using Edvi.Models.Model;
 
 namespace Edvi.DB.DB
 {
-    public  class Database : DbContext
-    {   //pulic virtual
-        public DbSet<Cliente> Clientes { get; set; }
-        public DbSet<Ruta> Rutas { get; set; }
-        public DbSet<Vehiculo> Vehiculos { get; set; }
-        public DbSet<GuiaRemision> GuiaRemisions { get; set; }
+    public  class Databases : DbContext
+    {   //public DbSet
+        public virtual IDbSet<Cliente> Clientes { get; set; }
+        public virtual IDbSet<Ruta> Rutas { get; set; }
+        public virtual IDbSet<Vehiculo> Vehiculos { get; set; }
+        public virtual IDbSet<GuiaRemision> GuiaRemisions { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
         base.OnModelCreating(modelBuilder);

@@ -11,5 +11,22 @@ namespace Edvi.Test.Controller
     [TestFixture]
     public class ClienteControllerTest
     {
+        [Test]
+        public void TestIndexReturnViewIsOk()
+        {
+            //Arrange
+            var mock = new Mock<IClienteService>();
+            //mock.Setup(x => x.All()).Returns(new List<Cliente>());
+            var controller = new ClienteController(mock.Object);
+
+            // Act
+            var view = controller.Index();
+
+            //Assert
+            //mock.Verify(x => x.All(), Times.Once);
+            //AssertViewsWithModel(view, "Index");
+            Assert.IsNotNull(view);
+            
+        }
     }
 }

@@ -10,9 +10,9 @@ namespace Edvi.Services.Service
 {
     public class ClienteService:IClienteService
     {
-        private readonly Database database;
+        private readonly Databases database;
 
-        public ClienteService(Database database)
+        public ClienteService(Databases database)
         {
             this.database = database;
         }

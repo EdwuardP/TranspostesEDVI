@@ -9,9 +9,9 @@ namespace Edvi.Services.Service
 {
     public class GuiaRemisionService:IGuiaRemisionService
     {
-        private readonly Database database;
+        private readonly Databases database;
 
-        public GuiaRemisionService(Database database)
+        public GuiaRemisionService(Databases database)
         {
             this.database = database;
         }

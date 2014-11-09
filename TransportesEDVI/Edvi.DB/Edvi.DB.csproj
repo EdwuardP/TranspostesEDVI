@@ -74,7 +74,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DB\Database.cs" />
+    <Compile Include="DB\Databases.cs" />
     <Compile Include="Map\ClienteMap.cs" />
     <Compile Include="Map\GuiaRemisionMap.cs" />
     <Compile Include="Map\RutaMap.cs" />
