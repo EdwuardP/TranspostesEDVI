@@ -10,7 +10,7 @@ using Edvi.Models.Model;
 namespace Edvi.DB.DB
 {
     public  class Database : DbContext
-    {
+    {   //pulic virtual
         public DbSet<Cliente> Clientes { get; set; }
         public DbSet<Ruta> Rutas { get; set; }
         public DbSet<Vehiculo> Vehiculos { get; set; }
