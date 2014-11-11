@@ -31,7 +31,7 @@ namespace Edvi.DB.Map
                 .IsRequired().HasPrecision(9, 2);
 
             // Table & Column Mappings
-            this.ToTable("GuiaRemisiones");
+            this.ToTable("GuiasRemision");
             this.Property(t => t.Id).HasColumnName("Id");
             this.Property(t => t.Nro).HasColumnName("NroGuias");
             this.Property(t => t.PesoTotal).HasColumnName("PesoTotal");

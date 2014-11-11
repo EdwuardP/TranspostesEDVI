@@ -35,15 +35,15 @@ namespace Edvi.Test.Service
 
             var service = new ClienteService(databaseMock.Object);
 
-            service.AddCliente(new Cliente { Ruc = "10702078540", RazSocial = "Tiger SA" });
+            service.AddCliente(new Cliente {Id = 4, Ruc = "10702078530", RazSocial = "Tiger SA" });
         }
         private IQueryable<Cliente> ClienteFakeDB()
         {
             return new List<Cliente>
             {
                 new Cliente { Id = 1, Ruc = "10702078500", RazSocial = "Pereda SA",Direccion = "Jr PSA 123", Telefono = "962739511"},
-                new Cliente { Id = 1, Ruc = "10702078510", RazSocial = "Rabanal SA",Direccion = "Jr RSA 456", Telefono = "962739512"},
-                new Cliente { Id = 1, Ruc = "10702078520", RazSocial = "Marin SA",Direccion = "Jr MSA 789", Telefono = "962739513"},
+                new Cliente { Id = 2, Ruc = "10702078510", RazSocial = "Rabanal SA",Direccion = "Jr RSA 456", Telefono = "962739512"},
+                new Cliente { Id = 3, Ruc = "10702078520", RazSocial = "Marin SA",Direccion = "Jr MSA 789", Telefono = "962739513"},
             }.AsQueryable();
         }
     }
