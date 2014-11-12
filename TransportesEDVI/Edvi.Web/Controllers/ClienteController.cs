@@ -19,7 +19,8 @@ namespace Edvi.Web.Controllers
         [HttpGet]
         public ViewResult Index()
         {
-            return View("Index");
+            return View("IndexCliente");
         }
+       
     }
 }

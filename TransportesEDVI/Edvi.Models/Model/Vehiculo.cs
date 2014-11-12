@@ -19,8 +19,8 @@ namespace Edvi.Models.Model
         public String Modelo { get; set; }
         public String CertInscripcion { get; set; }
         public String ConfVehicular { get; set; }
-        public DateTime FecVenSoat { get; set; }
-        public DateTime FecUltRevTecnica { get; set; }
+        public DateTime? FecVenSoat { get; set; }
+        public DateTime? FecUltRevTecnica { get; set; }
         public Decimal CargaBruta { get; set; }
         public String Estado { get; set; }
         //public List<DetalleGastMant> DetalleGastMants { get; set; }
