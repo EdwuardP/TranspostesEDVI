@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Edvi.DB", "Edvi.DB\Edvi.DB.csproj", "{FC4EAF4B-4AC5-4A21-9A99-6F25984EA845}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Edvi.Interfaces", "Edvi.Interfaces\Edvi.Interfaces.csproj", "{FA96F7B9-9AAF-4C65-A1B5-5422ACA08346}"
@@ -14,6 +12,13 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Edvi.Test", "Edvi.Test\Edvi.Test.csproj", "{ADCF67EB-14DD-43AB-8F27-7FCB3CD3DD57}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Edvi.Web", "Edvi.Web\Edvi.Web.csproj", "{2490557F-3D45-4F27-885C-62B4842A064E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{74D219BE-A7D5-4AAD-82FE-0C3D6D4727A4}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
