@@ -29,5 +29,44 @@ namespace Edvi.Test.Controller
             //AssertViewsWithModel(view, "Index");
             Assert.IsNotNull(view);
         }
+        [Test]
+        public void TestCreateReturnViewIsOk()
+        {
+            var controller = new RutaController(null);
+
+            var view = controller.Create() as ViewResult;
+
+            AssertViewWithoutModel(view, "Create");
+
+        }
+
+        [Test]
+        public void TestPostValicacionFallaReturnViewCreate()
+        {
+            var mock = new Mock<IRutaService>();
+
+            var controller = new RutaController(mock.Object);
+
+            var view = controller.Create(new Ruta()) as ViewResult;
+
+            AssertViewsWithModel(view, "create");
+            Assert.IsInstanceOf(typeof(Ruta), view.Model);
+
+        }
+
+
+        private void AssertViewsWithModel(ViewResult view, string viewName)
+        {
+            Assert.IsNotNull(view, "Vista no puede ser nulo");
+            Assert.AreEqual(viewName, view.ViewName);
+            Assert.IsNotNull(view.Model);
+        }
+
+        private void AssertViewWithoutModel(ViewResult view, string viewName)
+        {
+            Assert.IsNotNull(view);
+            Assert.AreEqual(viewName, view.ViewName);
+            Assert.IsNull(view.Model);
+        }
     }
 }

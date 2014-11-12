@@ -29,5 +29,18 @@ namespace Edvi.Web.Controllers
               return View("Create");
           }
 
+          [HttpPost]
+          public ActionResult Create(Ruta ruta)
+          {
+
+              //ValidateCreatePost(post);
+              if (ModelState.IsValid)
+              {
+                  service.AddRuta(ruta);
+                  return RedirectToAction("Index");
+              }
+              return View("create", ruta);
+          }
+
     }
 }

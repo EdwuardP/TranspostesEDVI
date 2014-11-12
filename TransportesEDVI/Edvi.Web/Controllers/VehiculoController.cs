@@ -31,5 +31,19 @@ namespace Edvi.Web.Controllers
               return View("Create");
           }
 
+          [HttpPost]
+          public ActionResult Create(Vehiculo vehiculo)
+          {
+
+              //ValidateCreatePost(post);
+              if (ModelState.IsValid)
+              {
+                  service.AddVehiculo(vehiculo);
+                  return RedirectToAction("Index");
+              }
+              return View("create", vehiculo);
+          }
+
+
     }
 }

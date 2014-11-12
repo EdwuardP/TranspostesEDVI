@@ -31,5 +31,19 @@ namespace Edvi.Web.Controllers
               return View("Create");
           }
 
+          [HttpPost]
+          public ActionResult Create(GuiaRemision guiaRemision)
+          {
+
+              //ValidateCreatePost(post);
+              if (ModelState.IsValid)
+              {
+                  service.AddGuiaRemision(guiaRemision);
+                  return RedirectToAction("Index");
+              }
+              return View("create", guiaRemision);
+          }
+       
+
     }
 }
