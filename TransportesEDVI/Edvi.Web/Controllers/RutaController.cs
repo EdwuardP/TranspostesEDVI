@@ -9,7 +9,7 @@ using Edvi.Models.Model;
 using Edvi.Services.Service;
 namespace Edvi.Web.Controllers
 {
-    public class RutaController
+    public class RutaController:Controller
     {
           private readonly IRutaService service;
           public RutaController(IRutaService service)
@@ -23,5 +23,11 @@ namespace Edvi.Web.Controllers
               //View("IndexRuta");
               return null;
           }
+          [HttpGet]
+          public ActionResult Create()
+          {
+              return View("Create");
+          }
+
     }
 }

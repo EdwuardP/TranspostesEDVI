@@ -21,6 +21,12 @@ namespace Edvi.Web.Controllers
         {
             return View("IndexCliente");
         }
+        [HttpGet]
+        public ActionResult Create()
+        {
+            return View("Create");
+        }
+
        
     }
 }

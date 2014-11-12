@@ -10,7 +10,7 @@ using Edvi.Services.Service;
 
 namespace Edvi.Web.Controllers
 {
-    public class VehiculoController
+    public class VehiculoController:Controller
     {
           private readonly IVehiculoService service;
           public VehiculoController(IVehiculoService service)
@@ -24,5 +24,12 @@ namespace Edvi.Web.Controllers
               //view("IndexVehiculo");
               return null;
           }
+
+          [HttpGet]
+          public ActionResult Create()
+          {
+              return View("Create");
+          }
+
     }
 }

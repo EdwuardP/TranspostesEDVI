@@ -225,6 +225,10 @@
     <Content Include="Views\GuiaRemision\IndexGuiaRemision.cshtml" />
     <Content Include="Views\Ruta\IndexRuta.cshtml" />
     <Content Include="Views\Vehiculo\IndexVehiculo.cshtml" />
+    <Content Include="Views\Cliente\Create.cshtml" />
+    <Content Include="Views\Ruta\Create.cshtml" />
+    <Content Include="Views\GuiaRemision\Create.cshtml" />
+    <Content Include="Views\Vehiculo\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

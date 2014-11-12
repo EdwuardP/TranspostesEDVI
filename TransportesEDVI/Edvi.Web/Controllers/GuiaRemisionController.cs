@@ -10,7 +10,7 @@ using Edvi.Models.Model;
 using Edvi.Services.Service;
 namespace Edvi.Web.Controllers
 {
-    public class GuiaRemisionController
+    public class GuiaRemisionController:Controller
     {
           private readonly IGuiaRemisionService service;
           public GuiaRemisionController(IGuiaRemisionService service)
@@ -25,5 +25,11 @@ namespace Edvi.Web.Controllers
 
               return null;
           }
+          [HttpGet]
+          public ActionResult Create()
+          {
+              return View("Create");
+          }
+
     }
 }
