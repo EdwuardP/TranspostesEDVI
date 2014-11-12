@@ -21,8 +21,8 @@ namespace Edvi.Web.Controllers
           [HttpGet]
           public ViewResult Index()
           {
-              //view("IndexVehiculo");
-              return null;
+
+              return View("IndexVehiculo");
           }
 
           [HttpGet]

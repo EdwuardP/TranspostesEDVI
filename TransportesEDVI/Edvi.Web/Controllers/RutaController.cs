@@ -20,8 +20,8 @@ namespace Edvi.Web.Controllers
           [HttpGet]
           public ViewResult Index()
           {
-              //View("IndexRuta");
-              return null;
+              
+              return View("IndexRuta");
           }
           [HttpGet]
           public ActionResult Create()

@@ -21,9 +21,7 @@ namespace Edvi.Web.Controllers
           [HttpGet]
           public ViewResult Index()
           {
-              //View("IndexGuiaRemision");
-
-              return null;
+              return View("IndexGuiaRemision");
           }
           [HttpGet]
           public ActionResult Create()
