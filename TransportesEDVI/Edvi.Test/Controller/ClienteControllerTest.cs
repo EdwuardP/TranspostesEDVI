@@ -40,7 +40,7 @@ namespace Edvi.Test.Controller
         }
 
         [Test]
-        public void TestPostValidacionFallaReturnViewCreate()
+        public void TestValidationFallaReturnViewCreate()
         {
             var mock = new Mock<IClienteService>();
 
@@ -56,9 +56,9 @@ namespace Edvi.Test.Controller
 
         private void AssertViewsWithModel(ViewResult view, string viewName)
         {
-           // Assert.IsNotNull(view, "Vista no puede ser nulo");
+            Assert.IsNotNull(view, "Vista no puede ser nulo");
             Assert.AreEqual(viewName, view.ViewName);
-           // Assert.IsNotNull(view.Model);
+            Assert.IsNotNull(view.Model);
         }
 
         private void AssertViewWithoutModel(ViewResult view, string viewName)

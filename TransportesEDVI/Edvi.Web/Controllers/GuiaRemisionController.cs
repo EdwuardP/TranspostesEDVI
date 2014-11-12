@@ -17,8 +17,8 @@ namespace Edvi.Web.Controllers
         {
             this.service = service;
         }
-
-          [HttpGet]
+        
+        [HttpGet]
           public ViewResult Index()
           {
               return View("IndexGuiaRemision");

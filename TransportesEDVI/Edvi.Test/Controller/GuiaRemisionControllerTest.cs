@@ -42,7 +42,7 @@ namespace Edvi.Test.Controller
         }
 
         [Test]
-        public void TestPostValidacionFallaReturnViewCreate()
+        public void TestValidationFallaReturnViewCreate()
         {
             var mock = new Mock<IGuiaRemisionService>();
 
