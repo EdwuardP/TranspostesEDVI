@@ -68,7 +68,9 @@
     <Compile Include="Service\RutaServiceTest.cs" />
     <Compile Include="Service\VehiculoServiceTest.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Validation\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config">
