@@ -39,6 +39,13 @@ namespace Edvi.Web.Controllers
             }
             return View("create", cliente);
         }
-       
-    }
+
+        public void Validar(Cliente cliente)
+        {
+            if(cliente.Ruc.Length!=11) ModelState.AddModelError("Ruc","Debe ser 11 digitos");
+
+            //inyeccion de modelstate a un diccionario traerlo de otro lugar 
+        }
+
+     }
 }
