@@ -44,7 +44,14 @@ namespace Edvi.Web.Controllers
         {
             if(cliente.Ruc.Length!=11) ModelState.AddModelError("Ruc","Debe ser 11 digitos");
 
-            //inyeccion de modelstate a un diccionario traerlo de otro lugar 
+            //inyeccion de modelstate a un diccionario traerlo de otro lugar Validador.validar se inyecta como un service 
+            //Private readonly validador, moquear clase validador, interface Ivalidador  
+            //Test unitario necesita a los 2 
+            //instanciar clase mandar objeto y esperar true objeto false placa vehiculo
+
+
+
+          
         }
 
      }
