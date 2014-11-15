@@ -10,7 +10,7 @@ namespace Edvi.Interfaces.Validador
 {
     public interface Ivalidador
     {
-        void ValidarClinte(Cliente cliente);
+        void ValidarCliente(Cliente cliente);
         void ValidarGuia(GuiaRemision guia);
         void ValidarRuta(Ruta ruta);
         void ValidarVehiculo(Vehiculo vehiculo);

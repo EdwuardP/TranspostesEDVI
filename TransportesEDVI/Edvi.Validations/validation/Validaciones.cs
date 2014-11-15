@@ -10,7 +10,7 @@ namespace Edvi.Validations.validation
     public class Validaciones:Ivalidador
     {
 
-        public void ValidarClinte(Models.Model.Cliente cliente)
+        public void ValidarCliente(Models.Model.Cliente cliente)
         {
           //  throw new NotImplementedException();
              if(cliente.Ruc.Length!=11)

@@ -47,7 +47,7 @@ namespace Edvi.Test.Controller
         [Test]
         public void TestUpdateReturnViewIsOk()
         {
-            var controller = new ClienteController(null);
+            var controller = new ClienteController(null,null);
 
             var view = controller.Update() as ViewResult;
 
@@ -57,7 +57,7 @@ namespace Edvi.Test.Controller
         [Test]
         public void TestRemoveReturnViewIsOk()
         {
-            var controller = new ClienteController(null);
+            var controller = new ClienteController(null,null);
 
             var view = controller.Remove() as ViewResult;
 
