@@ -27,6 +27,11 @@ namespace Edvi.Web.Controllers
             return View("Create");
         }
 
+        public ActionResult Update()
+        {
+            return View("Update");
+        }
+
         [HttpPost]
         public ActionResult Create(Cliente cliente)
         {
@@ -48,8 +53,6 @@ namespace Edvi.Web.Controllers
             //Private readonly validador, moquear clase validador, interface Ivalidador  
             //Test unitario necesita a los 2 
             //instanciar clase mandar objeto y esperar true objeto false placa vehiculo
-
-
 
           
         }

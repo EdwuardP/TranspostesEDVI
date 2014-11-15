@@ -1,0 +1,53 @@
+﻿@model Edvi.Models.Model.GuiaRemision
+
+@{
+    ViewBag.Title = "Update";
+}
+
+<h2>Update</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>GuiaRemision</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Nro)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Nro)
+            @Html.ValidationMessageFor(model => model.Nro)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PesoTotal)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PesoTotal)
+            @Html.ValidationMessageFor(model => model.PesoTotal)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Estado)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Estado)
+            @Html.ValidationMessageFor(model => model.Estado)
+        </div>
+
+        <p>
+            <input type="submit" value="Update" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -29,6 +29,11 @@ namespace Edvi.Web.Controllers
               return View("Create");
           }
 
+          public ActionResult Update()
+          {
+              return View("Update");
+          }
+
           [HttpPost]
           public ActionResult Create(GuiaRemision guiaRemision)
           {

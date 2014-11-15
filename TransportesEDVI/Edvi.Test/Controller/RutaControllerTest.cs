@@ -41,6 +41,17 @@ namespace Edvi.Test.Controller
         }
 
         [Test]
+        public void TestUpdateReturnViewIsOk()
+        {
+            var controller = new RutaController(null);
+
+            var view = controller.Update() as ViewResult;
+
+            AssertViewWithoutModel(view, "Update");
+
+        }
+
+        [Test]
         public void TestValidationFallaReturnViewCreate()
         {
             var mock = new Mock<IRutaService>();
@@ -49,7 +60,7 @@ namespace Edvi.Test.Controller
 
             var view = controller.Create(new Ruta()) as ViewResult;
 
-            AssertViewsWithModel(view, "create");
+            AssertViewsWithModel(view, "Create");
             Assert.IsInstanceOf(typeof(Ruta), view.Model);
 
         }
