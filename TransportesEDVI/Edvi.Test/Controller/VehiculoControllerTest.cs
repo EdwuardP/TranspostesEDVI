@@ -30,6 +30,7 @@ namespace Edvi.Test.Controller
             //AssertViewsWithModel(view, "Index");
             Assert.IsNotNull(view);
         }
+
         [Test]
         public void TestCreateReturnViewIsOk()
         {
@@ -38,6 +39,28 @@ namespace Edvi.Test.Controller
             var view = controller.Create() as ViewResult;
 
             AssertViewWithoutModel(view, "Create");
+
+        }
+
+        [Test]
+        public void TestUpdateReturnViewIsOk()
+        {
+            var controller = new VehiculoController(null);
+
+            var view = controller.Update() as ViewResult;
+
+            AssertViewWithoutModel(view, "Update");
+
+        }
+
+        [Test]
+        public void TestRemoveReturnViewIsOk()
+        {
+            var controller = new VehiculoController(null);
+
+            var view = controller.Remove() as ViewResult;
+
+            AssertViewWithoutModel(view, "Remove");
 
         }
 
@@ -51,7 +74,7 @@ namespace Edvi.Test.Controller
 
             var view = controller.Create(new Vehiculo()) as ViewResult;
 
-            AssertViewsWithModel(view, "create");
+            AssertViewsWithModel(view, "Create");
             Assert.IsInstanceOf(typeof(Vehiculo), view.Model);
 
         }

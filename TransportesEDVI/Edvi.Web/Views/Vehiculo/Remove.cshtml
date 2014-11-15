@@ -1,0 +1,109 @@
+﻿@model Edvi.Models.Model.Vehiculo
+
+@{
+    ViewBag.Title = "Remove";
+}
+
+<h2>Remove</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Vehiculo</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PlacaVehiculo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PlacaVehiculo)
+            @Html.ValidationMessageFor(model => model.PlacaVehiculo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Marca)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Marca)
+            @Html.ValidationMessageFor(model => model.Marca)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PlacaCarreta)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.PlacaCarreta)
+            @Html.ValidationMessageFor(model => model.PlacaCarreta)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Modelo)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Modelo)
+            @Html.ValidationMessageFor(model => model.Modelo)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CertInscripcion)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CertInscripcion)
+            @Html.ValidationMessageFor(model => model.CertInscripcion)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ConfVehicular)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ConfVehicular)
+            @Html.ValidationMessageFor(model => model.ConfVehicular)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FecVenSoat)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FecVenSoat)
+            @Html.ValidationMessageFor(model => model.FecVenSoat)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FecUltRevTecnica)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FecUltRevTecnica)
+            @Html.ValidationMessageFor(model => model.FecUltRevTecnica)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CargaBruta)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.CargaBruta)
+            @Html.ValidationMessageFor(model => model.CargaBruta)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Estado)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Estado)
+            @Html.ValidationMessageFor(model => model.Estado)
+        </div>
+
+        <p>
+            <input type="submit" value="Remove" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

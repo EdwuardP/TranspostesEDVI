@@ -43,6 +43,27 @@ namespace Edvi.Test.Controller
             AssertViewWithoutModel(view, "Create");
         }
 
+
+        [Test]
+        public void TestUpdateReturnViewIsOk()
+        {
+            var controller = new ClienteController(null);
+
+            var view = controller.Update() as ViewResult;
+
+            AssertViewWithoutModel(view, "Update");
+        }
+
+        [Test]
+        public void TestRemoveReturnViewIsOk()
+        {
+            var controller = new ClienteController(null);
+
+            var view = controller.Remove() as ViewResult;
+
+            AssertViewWithoutModel(view, "Remove");
+        }
+
         [Test]
         public void TestValidationReturnViewCreate()
         {

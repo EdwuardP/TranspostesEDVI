@@ -39,6 +39,15 @@ namespace Edvi.Web.Controllers
             return View("Create");
         }
 
+        public ActionResult Update()
+        {
+            return View("Update");
+        }
+
+        public ActionResult Remove()
+        {
+            return View("Remove");
+        }
         [HttpPost]
         public ActionResult Create(Cliente cliente)
         {
@@ -55,6 +64,7 @@ namespace Edvi.Web.Controllers
         public ActionResult CreateValidado(Cliente cliente)
         {
 
+<<<<<<< HEAD
             //ValidateCreatePost(post);
             if (ModelState.IsValid)
             {
@@ -62,6 +72,14 @@ namespace Edvi.Web.Controllers
                 return RedirectToAction("Index");
             }
             return View("create", cliente);
+=======
+            //inyeccion de modelstate a un diccionario traerlo de otro lugar Validador.validar se inyecta como un service 
+            //Private readonly validador, moquear clase validador, interface Ivalidador  
+            //Test unitario necesita a los 2 
+            //instanciar clase mandar objeto y esperar true objeto false placa vehiculo
+
+          
+>>>>>>> e1e2553897f70b54d9bc98da3c84cc0e80b4486f
         }
 
         //private void validador(Cliente cliente) 

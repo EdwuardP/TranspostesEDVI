@@ -37,6 +37,16 @@ namespace Edvi.Web.Controllers
               return View("Create");
           }
 
+          public ActionResult Update()
+          {
+              return View("Update");
+          }
+
+          public ActionResult Remove()
+          {
+              return View("Remove");
+          }
+
           [HttpPost]
           public ActionResult Create(Vehiculo vehiculo)
           {
