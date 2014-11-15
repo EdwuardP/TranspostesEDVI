@@ -239,6 +239,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Validation\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -259,6 +260,10 @@
     <ProjectReference Include="..\Edvi.Services\Edvi.Services.csproj">
       <Project>{55f8eee1-4d98-4a91-af44-7769fdbcf564}</Project>
       <Name>Edvi.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Edvi.Validations\Edvi.Validations.csproj">
+      <Project>{d19a121b-503a-4f23-992e-15eeafd9e6e9}</Project>
+      <Name>Edvi.Validations</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

@@ -7,6 +7,7 @@ using Edvi.Interfaces.Service;
 using System.Web.Mvc;
 using Edvi.Models.Model;
 using Edvi.Services.Service;
+using Edvi.Validations.validation;
 
 namespace Edvi.Web.Controllers
 {
@@ -17,6 +18,11 @@ namespace Edvi.Web.Controllers
         {
             this.service = service;
         }
+          //private readonly Ivalidador validador;
+          //public VehiculoController(Ivalidador validador)
+          //{
+          //    this.validador = validador;
+          //}
 
           [HttpGet]
           public ViewResult Index()
@@ -36,7 +42,8 @@ namespace Edvi.Web.Controllers
           {
 
               //ValidateCreatePost(post);
-              if (ModelState.IsValid)
+
+              if (ModelState.IsValid)//validador.ValidarVehiculo(vehiculo)
               {
                   service.AddVehiculo(vehiculo);
                   return RedirectToAction("Index");

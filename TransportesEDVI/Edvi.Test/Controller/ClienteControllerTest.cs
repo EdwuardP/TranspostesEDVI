@@ -3,6 +3,8 @@ using Edvi.Web.Controllers;
 using Edvi.Interfaces.Service;
 using Edvi.Models.Model;
 using Edvi.Services.Service;
+//using Edvi.Validations.validation;
+using Edvi.Interfaces.Validador;
 using Moq;
 using NUnit.Framework;
 using System.Web.Mvc;
@@ -16,8 +18,9 @@ namespace Edvi.Test.Controller
         {
             //Arrange
             var mock = new Mock<IClienteService>();
+            var mockvalidacion = new Mock<Ivalidador>();
             //mock.Setup(x => x.All()).Returns(new List<Cliente>());
-            var controller = new ClienteController(mock.Object);
+            var controller = new ClienteController(mock.Object,mockvalidacion.Object);
 
             // Act
             var view = controller.Index();
@@ -32,7 +35,8 @@ namespace Edvi.Test.Controller
         [Test]
         public void TestCreateReturnViewIsOk()
         {
-            var controller = new ClienteController(null);
+            var controller = new ClienteController(null,null);
+           
 
             var view = controller.Create() as ViewResult;
 
@@ -40,17 +44,18 @@ namespace Edvi.Test.Controller
         }
 
         [Test]
-        public void TestValidationFallaReturnViewCreate()
+        public void TestValidationReturnViewCreate()
         {
             var mock = new Mock<IClienteService>();
+            var mockValidacion = new Mock<Ivalidador>();
 
-            var controller = new ClienteController(mock.Object);
+            var controller = new ClienteController(mock.Object,mockValidacion.Object);
 
             var view = controller.Create(new Cliente()) as ViewResult;
+            var valido = controller.CreateValidado(new Cliente()) as ViewResult;
 
             AssertViewsWithModel(view, "Create");
             Assert.IsInstanceOf(typeof(Cliente), view.Model);
-
         }
 
 
