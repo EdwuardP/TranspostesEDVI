@@ -239,6 +239,10 @@
     <Content Include="Views\Ruta\Update.cshtml" />
     <Content Include="Views\GuiaRemision\Update.cshtml" />
     <Content Include="Views\Vehiculo\Update.cshtml" />
+    <Content Include="Views\Cliente\Remove.cshtml" />
+    <Content Include="Views\GuiaRemision\Remove.cshtml" />
+    <Content Include="Views\Ruta\Remove.cshtml" />
+    <Content Include="Views\Vehiculo\Remove.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

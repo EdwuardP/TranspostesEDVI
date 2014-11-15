@@ -51,6 +51,16 @@ namespace Edvi.Test.Controller
         }
 
         [Test]
+        public void TestRemoveReturnViewIsOk()
+        {
+            var controller = new ClienteController(null);
+
+            var view = controller.Remove() as ViewResult;
+
+            AssertViewWithoutModel(view, "Remove");
+        }
+
+        [Test]
         public void TestValidationFallaReturnViewCreate()
         {
             var mock = new Mock<IClienteService>();

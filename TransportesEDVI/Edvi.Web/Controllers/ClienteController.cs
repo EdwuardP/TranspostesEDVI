@@ -32,6 +32,10 @@ namespace Edvi.Web.Controllers
             return View("Update");
         }
 
+        public ActionResult Remove()
+        {
+            return View("Remove");
+        }
         [HttpPost]
         public ActionResult Create(Cliente cliente)
         {
