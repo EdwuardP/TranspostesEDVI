@@ -25,6 +25,7 @@ namespace Edvi.Test.Service
             mockDbset.Setup(x => x.Expression).Returns(db.Expression);
             mockDbset.Setup(x => x.ElementType).Returns(db.ElementType);
             mockDbset.Setup(x => x.GetEnumerator()).Returns(db.GetEnumerator);
+            //mock Database
             databaseMock = new Mock<Databases>();
             databaseMock.Setup(x => x.GuiaRemisions).Returns(mockDbset.Object);
         }
