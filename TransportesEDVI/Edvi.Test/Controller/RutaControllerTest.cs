@@ -30,7 +30,7 @@ namespace Edvi.Test.Controller
             Assert.IsNotNull(view);
         }
         [Test]
-        public void TestCreateReturnViewIsOk()
+        public void TestAddReturnViewIsOk()
         {
             var controller = new RutaController(null);
 

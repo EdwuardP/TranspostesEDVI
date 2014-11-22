@@ -33,7 +33,7 @@ namespace Edvi.Test.Controller
         }
 
         [Test]
-        public void TestCreateReturnViewIsOk()
+        public void TestAddReturnViewIsOk()
         {
             var controller = new ClienteController(null,null);
            
