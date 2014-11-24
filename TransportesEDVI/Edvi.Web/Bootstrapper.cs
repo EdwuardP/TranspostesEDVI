@@ -35,8 +35,10 @@ namespace Edvi.Web
     public static void RegisterTypes(IUnityContainer container)
     {
         container.RegisterType<IClienteService, ClienteService>();
-        container.RegisterType<Ivalidador, Validaciones>();
         container.RegisterType<IRutaService, RutaService>();
+        container.RegisterType<IGuiaRemisionService, GuiaRemisionService>();
+        container.RegisterType<IVehiculoService, VehiculoService>();
+        container.RegisterType<Ivalidador, Validaciones>();
     }
   }
 }

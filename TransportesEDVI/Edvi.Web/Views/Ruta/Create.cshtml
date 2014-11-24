@@ -1,42 +1,76 @@
-﻿<div class=" container">
-    <div class="row">
-        <div class="col-sm-12">
+﻿@model Edvi.Models.Model.Ruta
 
-            <form action="@Url.Action("Create", "Ruta")" method="POST" class="form-horizontal">
+@{
+    ViewBag.Title = "Create";
+}
 
-                <div class="btn btn-primary">
-                    <label for="Origen" class="col-sm-2 control-label">Origen</label>
-                    <div class="col-sm-10">
-                        @Html.TextBox("Origen", "", new { @class = "form-control" })
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <div class=" container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                @*BANNER*@
+                <br />
+                <section style="background-color: goldenrod">
+                    <div class="panel-heading">
+                        <hgroup>
+                            <h1>Registrar Ruta </h1>
+                        </hgroup>
+                        <hr />
+                        <p>
+                            * A continuacion llene los campos mostrados
+                        </p>
                     </div>
-                </div>
+                </section>
+                <br/>
+            
+                @*FORMULARIO*@
+                <form action="@Url.Action("Create", "Ruta")" method="POST" class="form-horizontal">
+                    <div class="btn panel-primary col-sm-12 "style="background-color: darkkhaki">
+                        <table class="table table-bordered "  style="color: black;" >
+                            <tr>
+                                <td><label for="Origen" class="col-sm-2 glyphicon glyphicon-pencil"> Origen</label></td>
+                                <td >
+                                    @Html.TextBox("Origen", "", new {@class = "form-control"})
+                                </td>
 
-                <div class="form-group">
-                    <label for="Destino" class="col-sm-2 control-label">Destino</label>
-                    <div class="col-sm-10">
-                        @Html.TextBox("Destino", "", new { @class = "form-control" })
+                                <td><label for="Destino" class="col-sm-2 glyphicon glyphicon-pencil"> Destino</label></td>
+                                <td >
+                                    @Html.TextBox("Destino", "", new {@class = "form-control"})
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><label for="Distancia" class="col-sm-2 glyphicon glyphicon-pencil"> Distancia</label></td>
+                                <td>
+                                    @Html.TextBox("Distancia", "", new {@class = "form-control"})
+                                </td>
+                                <td><label for="Descripcion" class="col-sm-2 glyphicon glyphicon-comment"> Comentario</label></td>
+                                <td>
+                                    @Html.TextArea("Descripcion", "", new {@class = "form-control"})
+                                </td>
+                            </tr>
+                        </table>
+
+                        <button type="submit" class="btn btn-danger  pull-right">Cancelar</button>
+                        <button type="submit" class="btn btn-success pull-right">Guardar</button>
+                    
+                        <img src="~/Images/Ruta1.jpg" alt="Ruta1" class="img-responsive btn btn-default" width="300" height="300" />
+                        <img src="~/Images/Ruta2.jpg" alt="Ruta2" class="img-responsive btn btn-default" width="300" height="300" />
+                        <img src="~/Images/Ruta3.jpg" alt="Ruta3" class="img-responsive btn btn-default" width="300" height="300" />
+
                     </div>
-                </div>
+                </form>
 
-
-                <div class="form-group">
-                    <label for="Descripcion" class="col-sm-2 control-label">Comentario</label>
-                    <div class="col-sm-10">
-                        @Html.TextArea("Descripcion", "", new { @class = "form-control" })
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <label for="Distancia" class="col-sm-2 control-label">Distancia</label>
-                    <div class="col-sm-10">
-                        @Html.TextArea("Distancia", "", new { @class = "form-control" })
-                    </div>
-                </div>
-
-                <button type="submit" class="btn btn-default pull-right">Guardar</button>
-
-            </form>
-
+            </div>
         </div>
     </div>
-</div>
+
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -4,104 +4,106 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Create</h2>
-
-@using (Html.BeginForm()) {
+@using (Html.BeginForm())
+{
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
 
-    <fieldset>
-        <legend>Vehiculo</legend>
+    <div class=" container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                @*BANNER*@
+                <br />
+                <section style="background-color: goldenrod">
+                    <div class="panel-heading">
+                        <hgroup>
+                            <h1>Registrar Vehiculo </h1>
+                        </hgroup>
+                        <hr />
+                        <p>
+                            * A continuacion llene los campos mostrados
+                        </p>
+                    </div>
+                </section>
+                <br />
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.PlacaVehiculo)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.PlacaVehiculo)
-            @Html.ValidationMessageFor(model => model.PlacaVehiculo)
-        </div>
+                @*FORMULARIO*@
+                <form action="@Url.Action("Create", "Vehiculo")" method="POST" class="form-horizontal">
+                    <div class="btn panel-primary col-sm-12 " style="background-color: darkkhaki">
+                        <table class="table table-bordered " style="color: black;">
+                            <tr>
+                                <td><label for="PlacaVehiculo" class="col-sm-2 glyphicon glyphicon-edit"> Placa Vehiculo</label></td>
+                                <td>
+                                    @Html.TextBox("PlacaVehiculo", "", new { @class = "form-control" })
+                                </td>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Marca)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Marca)
-            @Html.ValidationMessageFor(model => model.Marca)
-        </div>
+                                <td><label for="PlacaCarreta" class="col-sm-2 glyphicon glyphicon-edit"> Placa Carreta</label></td>
+                                <td>
+                                    @Html.TextBox("PlacaCarreta", "", new { @class = "form-control" })
+                                </td>
+                            </tr>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.PlacaCarreta)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.PlacaCarreta)
-            @Html.ValidationMessageFor(model => model.PlacaCarreta)
-        </div>
+                            <tr>
+                                <td><label for="Marca" class="col-sm-2 glyphicon glyphicon-tag"> Marca</label></td>
+                                <td>
+                                    @Html.TextBox("Marca", "", new { @class = "form-control" })
+                                </td>
+                                <td><label for="Modelo" class="col-sm-2 glyphicon glyphicon-tag"> Modelo</label></td>
+                                <td>
+                                    @Html.TextBox("Modelo", "", new { @class = "form-control" })
+                                </td>
+                            </tr>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Modelo)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Modelo)
-            @Html.ValidationMessageFor(model => model.Modelo)
-        </div>
+                            <tr>
+                                <td><label for="CertInscripcion" class="col-sm-2 glyphicon glyphicon-pencil"> Certificado Inscripcion</label></td>
+                                <td>
+                                    @Html.TextBox("CertInscripcion", "", new { @class = "form-control" })
+                                </td>
+                                <td><label for="ConfVehicular" class="col-sm-2 glyphicon glyphicon-pencil"> Configuracion Vehicular</label></td>
+                                <td>
+                                    @Html.TextBox("ConfVehicular", "", new { @class = "form-control" })
+                                </td>
+                            </tr>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.CertInscripcion)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.CertInscripcion)
-            @Html.ValidationMessageFor(model => model.CertInscripcion)
-        </div>
+                            <tr>
+                                <td><label for="FecVenSoat" class="col-sm-2 glyphicon glyphicon-calendar"> Fecha Vencimiento Soat</label></td>
+                                <td>
+                                    @Html.TextBox("FecVenSoat", "", new { @class = "form-control" })
+                                </td>
+                                <td><label for="FecUltRevTecnica" class="col-sm-2 glyphicon glyphicon-calendar"> Fecha Ultima Revision</label></td>
+                                <td>
+                                    @Html.TextBox("FecUltRevTecnica", "", new { @class = "form-control" })
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td><label for="CargaBruta" class="col-sm-2 glyphicon glyphicon-edit"> Carga Bruta</label></td>
+                                <td>
+                                    @Html.TextBox("CargaBruta", "", new { @class = "form-control" })
+                                </td>
+                                <td><label for="Estado" class="col-sm-2 glyphicon glyphicon-tag"> Estado</label></td>
+                                <td>
+                                    @Html.TextBox("Estado", "", new { @class = "form-control" })
+                                </td>
+                            </tr>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.ConfVehicular)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.ConfVehicular)
-            @Html.ValidationMessageFor(model => model.ConfVehicular)
-        </div>
+                        </table>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.FecVenSoat)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.FecVenSoat)
-            @Html.ValidationMessageFor(model => model.FecVenSoat)
-        </div>
+                        <button type="submit" class="btn btn-danger  pull-right">Cancelar</button>
+                        <button type="submit" class="btn btn-success pull-right">Guardar</button>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.FecUltRevTecnica)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.FecUltRevTecnica)
-            @Html.ValidationMessageFor(model => model.FecUltRevTecnica)
-        </div>
+                        <img src="~/Images/Ruta1.jpg" alt="Ruta1" class="img-responsive btn btn-default" width="300" height="300" />
+                        <img src="~/Images/Ruta2.jpg" alt="Ruta2" class="img-responsive btn btn-default" width="300" height="300" />
+                        <img src="~/Images/Ruta3.jpg" alt="Ruta3" class="img-responsive btn btn-default" width="300" height="300" />
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.CargaBruta)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.CargaBruta)
-            @Html.ValidationMessageFor(model => model.CargaBruta)
-        </div>
+                    </div>
+                </form>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Estado)
+            </div>
         </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Estado)
-            @Html.ValidationMessageFor(model => model.Estado)
-        </div>
+    </div>
 
-        <p>
-            <input type="submit" value="Create" />
-        </p>
-    </fieldset>
 }
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

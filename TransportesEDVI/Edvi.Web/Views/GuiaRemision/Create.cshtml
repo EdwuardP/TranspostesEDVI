@@ -4,47 +4,78 @@
     ViewBag.Title = "Create";
 }
 
-<h2>Create</h2>
-
-@using (Html.BeginForm()) {
+@using (Html.BeginForm()) 
+{
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
 
-    <fieldset>
-        <legend>GuiaRemision</legend>
+    <div class=" container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                @*BANNER*@
+                <br />
+                <section style="background-color: goldenrod">
+                    <div class="panel-heading">
+                        <hgroup>
+                            <h1>Registrar Guia de Remision </h1>
+                        </hgroup>
+                        <hr />
+                        <p>
+                            * A continuacion llene los campos mostrados
+                        </p>
+                    </div>
+                </section>
+                <br />
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Nro)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Nro)
-            @Html.ValidationMessageFor(model => model.Nro)
-        </div>
+                @*FORMULARIO*@
+                <form action="@Url.Action("Create", "GuiaRemision")" method="POST" class="form-horizontal">
+                    <div class="btn panel-primary col-sm-12 " style="background-color: darkkhaki">
+                        <table class="table table-bordered " style="color: black; ">
+                            <tr>
+                                <td><label for="Nro" class="col-sm-2 glyphicon glyphicon-edit"> Nº Guia</label></td>
+                                <td>
+                                    @Html.TextBox("Nro", "", new { @class = "form-control" })
+                                </td>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.PesoTotal)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.PesoTotal)
-            @Html.ValidationMessageFor(model => model.PesoTotal)
-        </div>
+                                <td><label for="PesoTotal" class="col-sm-2 glyphicon glyphicon-edit"> Peso Total</label></td>
+                                <td>
+                                    @Html.TextBox("PesoTotal", "", new { @class = "form-control" })
+                                </td>
+                            </tr>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Estado)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Estado)
-            @Html.ValidationMessageFor(model => model.Estado)
-        </div>
+                            <tr>
+                                <td><label for="Estado" class="col-sm-2 glyphicon glyphicon-tag"> Estado</label></td>
+                                <td>
+                                    @Html.TextBox("Estado", "", new { @class = "form-control" })
+                                </td>
+                            </tr>
+                        </table>
 
-        <p>
-            <input type="submit" value="Create" />
-        </p>
-    </fieldset>
+                        <button type="submit" class="btn btn-danger  pull-right">Cancelar</button>
+                        <button type="submit" class="btn btn-success pull-right">Guardar</button>
+                        
+                        
+                        <img src="~/Images/Ruta1.jpg" alt="Ruta1" class="img-responsive btn btn-default" width="300" height="300" />
+                        <img src="~/Images/Ruta2.jpg" alt="Ruta2" class="img-responsive btn btn-default" width="300" height="300" />
+                        <img src="~/Images/Ruta3.jpg" alt="Ruta3" class="img-responsive btn btn-default" width="300" height="300" />
+
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+    
 }
 
+
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @*@Html.ActionLink("Back", "Index")*@
+</div>
+
+<div class="editor-field">
+    @*@Html.EditorFor(model => model.Nro)
+    @Html.ValidationMessageFor(model => model.Nro)*@
 </div>
 
 @section Scripts {

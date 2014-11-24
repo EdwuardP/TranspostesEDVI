@@ -14,8 +14,8 @@ namespace Edvi.Models.Model
         //}
         public Int32 Id { get; set; }
         public String PlacaVehiculo { get; set; }
-        public String Marca { get; set; }
         public String PlacaCarreta { get; set; }
+        public String Marca { get; set; }
         public String Modelo { get; set; }
         public String CertInscripcion { get; set; }
         public String ConfVehicular { get; set; }

@@ -1,1 +1,76 @@
-﻿<h2>Create</h2>
+﻿@model Edvi.Models.Model.Cliente
+
+@{
+    ViewBag.Title = "Create";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <div class=" container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                @*BANNER*@
+                <br />
+                <section style="background-color: goldenrod">
+                    <div class="panel-heading">
+                        <hgroup>
+                            <h1>Registrar Cliente </h1>
+                        </hgroup>
+                        <hr />
+                        <p>
+                            * A continuacion llene los campos mostrados
+                        </p>
+                    </div>
+                </section>
+                <br />
+
+                @*FORMULARIO*@
+                <form action="@Url.Action("Create", "Cliente")" method="POST" class="form-horizontal">
+                    <div class="btn panel-primary col-sm-12 " style="background-color: darkkhaki">
+                        <table class="table table-bordered " style="color: black;">
+                            <tr>
+                                <td><label for="Ruc" class="col-sm-2 glyphicon glyphicon-edit"> RUC</label></td>
+                                <td>
+                                    @Html.TextBox("Ruc", "", new {@class = "form-control"})
+                                </td>
+
+                                <td><label for="RazSocial" class="col-sm-2 glyphicon glyphicon-user"> Razon Social</label></td>
+                                <td>
+                                    @Html.TextBox("RazSocial", "", new {@class = "form-control"})
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td><label for="Direccion" class="col-sm-2 glyphicon glyphicon-pencil"> Direccion</label></td>
+                                <td>
+                                    @Html.TextBox("Direccion", "", new {@class = "form-control"})
+                                </td>
+                                <td><label for="Telefono" class="col-sm-2 glyphicon glyphicon-phone"> Telefono</label></td>
+                                <td>
+                                    @Html.TextBox("Telefono", "", new { @class = "form-control" })
+                                </td>
+                            </tr>
+                        </table>
+
+                        <button type="submit" class="btn btn-danger  pull-right">Cancelar</button>
+                        <button type="submit" class="btn btn-success pull-right">Guardar</button>
+
+                        <img src="~/Images/Ruta1.jpg" alt="Ruta1" class="img-responsive btn btn-default" width="300" height="300" />
+                        <img src="~/Images/Ruta2.jpg" alt="Ruta2" class="img-responsive btn btn-default" width="300" height="300" />
+                        <img src="~/Images/Ruta3.jpg" alt="Ruta3" class="img-responsive btn btn-default" width="300" height="300" />
+
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
