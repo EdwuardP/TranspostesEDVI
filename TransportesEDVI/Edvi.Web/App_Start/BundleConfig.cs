@@ -17,6 +17,12 @@ namespace Edvi.Web
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.unobtrusive*",
                         "~/Scripts/jquery.validate*"));
+            //AGREGAMOS SCRIPTS 
+            bundles.Add(new ScriptBundle("~/Script/Bootstrap").Include(
+               "~/Scripts/Bootstrap.js"));
+
+            bundles.Add(new StyleBundle("~/Content/Bootstrap").Include(
+                "~/Content/bootstrap.css"));
 
             // Utilice la versión de desarrollo de Modernizr para desarrollar y obtener información sobre los formularios. De este modo, estará
             // preparado para la producción y podrá utilizar la herramienta de creación disponible en http://modernizr.com para seleccionar solo las pruebas que necesite.
