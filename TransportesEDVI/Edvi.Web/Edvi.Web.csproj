@@ -280,6 +280,9 @@
     <Content Include="Views\GuiaRemision\Remove.cshtml" />
     <Content Include="Views\Ruta\Remove.cshtml" />
     <Content Include="Views\Vehiculo\Remove.cshtml" />
+    <Content Include="Views\Inicio.cshtml" />
+    <Content Include="Views\Contacto.cshtml" />
+    <Content Include="Views\Acerca.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
