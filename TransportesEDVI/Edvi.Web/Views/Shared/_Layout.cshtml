@@ -1,10 +1,10 @@
 ﻿@*html lang="es"*@
 <!DOCTYPE html>
-<html >
+<html>
 <head>
     <meta charset="utf-8" />
     <title>@ViewBag.Title - Trasportes EDVI</title>
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="~/Images/Icono.png" rel="shortcut icon" type="image/x-icon" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
         body {
@@ -17,35 +17,49 @@
         }
     </style>
     @Scripts.Render("~/bundles/modernizr")
-    @Styles.Render("~/Content/Bootstrap")
     @Styles.Render("~/Content/css")
 
     <link href="@Url.Content("~/Content/bootstrap.min.css")" rel="stylesheet" />
-  
+
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-               @* <a class="navbar-brand" href="@Url.Action("Index", "Home")">Your Logo Here</a>*@
+        @*NAVEGADOR*@
+        <div class="navbar navbar-inverse">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">EDVI SOFT</a>
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">Inicio</a></li>
+                        <li><a href="#">Acerda</a></li>
+                        <li><a href="#">Contacto</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">A</a></li>
+                                <li><a href="#">B</a></li>
+                                <li><a href="#">C</a></li>
+                                <li class="divider"></li>
+                                <li class="dropdown-header">Nav header</li>
+                                <li><a href="#">Separated link</a></li>
+                                <li><a href="#">One more separated link</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    @*@Html.Partial("_LoginPartial")*@
+                </div>
             </div>
-            <div class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                @*<li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>*@
-                </ul>
-                @*@Html.Partial("_LoginPartial")*@
-            </div>
-            
         </div>
     </div>
+    
     <div class="container">
 
         @if (IsSectionDefined("featured"))
@@ -59,5 +73,7 @@
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/Scripts/Bootstrap")
     @RenderSection("scripts", required: false)
+
 </body>
 </html>
+

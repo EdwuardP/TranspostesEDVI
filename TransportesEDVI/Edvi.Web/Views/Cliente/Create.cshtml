@@ -25,10 +25,9 @@
                         </p>
                     </div>
                 </section>
-                <br />
-
+                
                 @*SLIDE*@
-                <div id="mySlider" class="carousel  slide">
+                <div id="mySlider" class="carousel slide">
                     <ol class="carousel-indicators">
                         <li data-target="#mySlider" data-slide-to="0" class="active"></li>
                         <li data-target="#mySlider" data-slide-to="1"></li>
@@ -45,10 +44,12 @@
                             <img alt="second slide" src="~/Images/Ruta3.jpg" />
                         </div>
                     </div>
-                    <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
-                    <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+                    <a class="left carousel-control" href="#mySlider" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                    <a class="right carousel-control" href="#mySlider" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
                 </div>
-                
+            
+               
+           
                 @*FORMULARIO*@
                 <form action="@Url.Action("Create", "Cliente")" method="POST" class="form-horizontal">
                     <div class="btn panel-primary col-sm-12 " style="background-color: darkkhaki">
@@ -80,7 +81,21 @@
                         <button type="submit" class="btn btn-danger  pull-right">Cancelar</button>
                         <button type="submit" class="btn btn-success pull-right">Guardar</button>
 
-                     </div>
+                    </div>
+                    <div id="contacto" class="panel-body col-sm-12" style="background-color:peru">
+                        <div>
+                            <h6>Oficina Principal</h6>
+                            <p>
+                                Av. El Derby No. 055 - Torre 1, Oficina 301, Urb. Lima Polo and Hunt Club - Santiago de Surco, Lima 33 - Perú<br>
+                                <b>Central:</b> +51 1 706-0400 - <b>Fax:</b> +51 1 706 0420
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="btn panel-default col-sm-12" style="background-color: palegoldenrod">
+                        <div align="right">Copyright © 2014. Todos los Derechos Reservados. Transportes EDVI EIRL.</div>
+                    </div>
+
                 </form>
 
             </div>
@@ -89,21 +104,9 @@
 
 }
 
-@section Scripts {
+@*@section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
-}
+}*@
 
-        <div id="oficinas" class="panel-body col-sm-12" style="background-color:darkgray">
-            <div>
-                <h6>Oficina Principal</h6>
-                <p>
-                    Av. El Derby No. 055 - Torre 1, Oficina 301, Urb. Lima Polo and Hunt Club - Santiago de Surco, Lima 33 - Perú<br>
-                    <b>Central:</b> +51 1 706-0400 - <b>Fax:</b> +51 1 706 0420
-                </p>
-            </div>
-        
-        </div>
-        <div class="btn panel-default col-sm-12">
-            <div align="right">Copyright © 2014. Todos los Derechos Reservados. Transportes EDVI EIRL.</div>
-        </div>
+       
     
