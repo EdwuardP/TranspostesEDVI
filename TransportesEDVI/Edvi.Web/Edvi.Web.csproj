@@ -153,6 +153,7 @@
     <Compile Include="Bootstrapper.cs" />
     <Compile Include="Controllers\ClienteController.cs" />
     <Compile Include="Controllers\GuiaRemisionController.cs" />
+    <Compile Include="Controllers\InicioController.cs" />
     <Compile Include="Controllers\RutaController.cs" />
     <Compile Include="Controllers\VehiculoController.cs" />
     <Compile Include="Global.asax.cs">
@@ -280,9 +281,9 @@
     <Content Include="Views\GuiaRemision\Remove.cshtml" />
     <Content Include="Views\Ruta\Remove.cshtml" />
     <Content Include="Views\Vehiculo\Remove.cshtml" />
-    <Content Include="Views\Inicio.cshtml" />
-    <Content Include="Views\Contacto.cshtml" />
-    <Content Include="Views\Acerca.cshtml" />
+    <Content Include="Views\Inicio\Index.cshtml" />
+    <Content Include="Views\Inicio\Contacto.cshtml" />
+    <Content Include="Views\Inicio\Acerca.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

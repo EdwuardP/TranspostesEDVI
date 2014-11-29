@@ -38,6 +38,6 @@ namespace Edvi.Web
         container.RegisterType<IGuiaRemisionService, GuiaRemisionService>();
         container.RegisterType<IVehiculoService, VehiculoService>();
         container.RegisterType<Ivalidador, Validaciones>();
-    }
+     }
   }
 }

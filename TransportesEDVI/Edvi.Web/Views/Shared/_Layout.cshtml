@@ -22,63 +22,73 @@
     <link href="@Url.Content("~/Content/bootstrap.min.css")" rel="stylesheet" />
 
 </head>
-<body>
-    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <body>
         @*NAVEGADOR*@
-        <div class="navbar navbar-inverse">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#">EDVI SOFT</a>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="/Inicio">Inicio</a></li>
-                        <li><a href="#">Acerca</a></li>
-                        <li><a href="/Cliente/Create">Cliente</a></li>
-                        <li><a href="/Ruta/Create">Ruta</a></li>
-                        <li><a href="/Vehiculo/Create">Vehiculo</a></li>
-                        <li><a href="/GuiaRemision/Create">Guia Remision</a></li>
-                        <li><a href="#">Contacto</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">A</a></li>
-                                <li><a href="#">B</a></li>
-                                <li><a href="#">C</a></li>
-                                <li class="divider"></li>
-                                <li class="dropdown-header">Nav header</li>
-                                <li><a href="#">Separated link</a></li>
-                                <li><a href="#">One more separated link</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    @*@Html.Partial("_LoginPartial")*@
+        <div class="navbar navbar-inverse navbar-fixed-top " role="navigation">
+            <div class="navbar navbar-inverse ">
+                <div class="container ">
+                    <div class="navbar-header " align="left">
+                        <a class="navbar-brand text-left"><b>EDVI SOFT</b></a>
+                    </div>
+
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav text-right">
+                            <li class="active"><a href=@Url.Content("/Inicio/Index")>Inicio</a></li>
+                            <li><a href=@Url.Content("/Inicio/Acerca")>Acerca</a></li>
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Administracion<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Contrato</a></li>
+                                    <li class="divider"></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Logistica<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href=@Url.Content("/Ruta/Create")>Ruta</a></li>
+                                    <li class="divider"></li>
+                                </ul>
+                            </li>
+
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">Recursos Empresariales<b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href=@Url.Content("/Cliente/Create")>Cliente</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href=@Url.Content("/Vehiculo/Create")>Vehiculo</a></li>
+                                    <li class="divider"></li>
+                                    <li><a href=@Url.Content("/GuiaRemision/Create")>Guia Remision</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href=@Url.Content("/Inicio/Contacto")>Contacto</a></li>
+
+                        </ul>
+                        @*@Html.Partial("_LoginPartial")*@
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    
-    <div class="container">
 
-        @if (IsSectionDefined("featured"))
-        {
-            <div class="jumbotron">
-                @RenderSection("featured", required: false)
-            </div>
-        }
-        @RenderBody()
-    </div>
-    @Scripts.Render("~/bundles/jquery")
-    <script src="@Url.Content("~/Scripts/bootstrap.js")"></script>
-    @RenderSection("scripts", required: false)
+
+        <div class="container">
+
+            @if (IsSectionDefined("featured"))
+            {
+                <div class="jumbotron">
+                    @RenderSection("featured", required: false)
+                </div>
+            }
+            
+            @RenderBody()
+        </div>
+        @Scripts.Render("~/bundles/jquery")
+        <script src="@Url.Content("~/Scripts/bootstrap.js")"></script>
+        @RenderSection("scripts", required: false)
     
 
-</body>
+    </body>
 </html>
 
