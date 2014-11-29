@@ -11,5 +11,6 @@ namespace Edvi.Interfaces.Service
     {
         //Cliente getFromClienteById(Int32 id);
         void AddCliente(Cliente cliente);
+        IList<Cliente> AllCliente();
     }
 }

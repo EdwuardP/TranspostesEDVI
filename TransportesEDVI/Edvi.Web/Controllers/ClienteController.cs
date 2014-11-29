@@ -29,9 +29,9 @@ namespace Edvi.Web.Controllers
          // }
 
         [HttpGet]
-        public ViewResult Index()
+        public ViewResult IndexCliente()
         {
-            return View("IndexCliente");
+            return View("IndexCliente",service.AllCliente());
         }
         [HttpGet]
         public ActionResult Create()

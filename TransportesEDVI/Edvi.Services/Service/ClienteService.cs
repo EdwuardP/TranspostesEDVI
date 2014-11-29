@@ -22,5 +22,11 @@ namespace Edvi.Services.Service
             database.Clientes.Add(cliente);
             database.SaveChanges();
         }
+
+
+        public IList<Models.Model.Cliente> AllCliente()
+        {
+            return database.Clientes.ToList();
+        }
     }
 }
