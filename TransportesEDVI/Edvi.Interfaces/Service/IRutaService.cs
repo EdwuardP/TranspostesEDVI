@@ -10,6 +10,7 @@ namespace Edvi.Interfaces.Service
     {
         //Ruta GetRutaById(Int32 id);
         void AddRuta(Ruta ruta);
+        IList<Ruta> AllRuta();
 
     }
 }

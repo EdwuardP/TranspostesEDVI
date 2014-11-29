@@ -56,20 +56,19 @@ namespace Edvi.Web.Controllers
             if (ModelState.IsValid)
             {
                 service.AddCliente(cliente);
-                return RedirectToAction("Index");
+                return RedirectToAction("IndexCliente");
             }
             return View("create", cliente);
         }
         [HttpPost]
         public ActionResult CreateValidado(Cliente cliente)
         {
-
-
+            
             //ValidateCreatePost(post);
             if (ModelState.IsValid)
             {
                 validador.ValidarCliente(cliente);
-                return RedirectToAction("Index");
+                return RedirectToAction("IndexCliente");
             }
             return View("create", cliente);
 

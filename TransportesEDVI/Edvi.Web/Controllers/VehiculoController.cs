@@ -25,10 +25,10 @@ namespace Edvi.Web.Controllers
           //}
 
           [HttpGet]
-          public ViewResult Index()
+          public ViewResult IndexVehiculo()
           {
 
-              return View("IndexVehiculo");
+              return View("IndexVehiculo", service.AllVehiculo());
           }
 
           [HttpGet]
@@ -56,7 +56,7 @@ namespace Edvi.Web.Controllers
               if (ModelState.IsValid)//validador.ValidarVehiculo(vehiculo)
               {
                   service.AddVehiculo(vehiculo);
-                  return RedirectToAction("Index");
+                  return RedirectToAction("IndexVehiculo");
               }
               return View("create", vehiculo);
           }

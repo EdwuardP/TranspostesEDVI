@@ -19,9 +19,9 @@ namespace Edvi.Web.Controllers
         }
         
         [HttpGet]
-          public ViewResult Index()
+          public ViewResult IndexGuiaRemision()
           {
-              return View("IndexGuiaRemision");
+              return View("IndexGuiaRemision", service.AllGuiaRemision());
           }
           [HttpGet]
           public ActionResult Create()
@@ -47,7 +47,7 @@ namespace Edvi.Web.Controllers
               if (ModelState.IsValid)
               {
                   service.AddGuiaRemision(guiaRemision);
-                  return RedirectToAction("Index");
+                  return RedirectToAction("IndexGuiaRemision");
               }
               return View("create", guiaRemision);
           }

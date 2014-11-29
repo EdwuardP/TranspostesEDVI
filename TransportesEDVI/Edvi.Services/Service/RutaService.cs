@@ -20,5 +20,10 @@ namespace Edvi.Services.Service
             database.Rutas.Add(ruta);
             database.SaveChanges();
         }
+
+        public IList<Models.Model.Ruta> AllRuta()
+        {
+            return database.Rutas.ToList();
+        }
     }
 }
