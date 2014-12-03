@@ -18,10 +18,10 @@ namespace Edvi.Web.Controllers
         }
 
           [HttpGet]
-          public ViewResult Index()
+          public ViewResult IndexRuta()
           {
-              
-              return View("IndexRuta");
+
+              return View("IndexRuta", service.AllRuta());
           }
           [HttpGet]
           public ActionResult Create()
@@ -47,7 +47,7 @@ namespace Edvi.Web.Controllers
               if (ModelState.IsValid)
               {
                   service.AddRuta(ruta);
-                  return RedirectToAction("Index");
+                  return RedirectToAction("IndexRuta");
               }
               return View("create", ruta);
           }

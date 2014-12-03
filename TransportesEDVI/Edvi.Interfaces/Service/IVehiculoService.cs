@@ -11,6 +11,9 @@ namespace Edvi.Interfaces.Service
         //Vehiculo GetFromVehiculoById(Int32 id);
         void AddVehiculo(Vehiculo vehiculo);
         IList<Vehiculo> AllVehiculo();
+<<<<<<< HEAD
    
+=======
+>>>>>>> 4c7e1daca27e9998493127d86ade1f11e7127734
     }
 }

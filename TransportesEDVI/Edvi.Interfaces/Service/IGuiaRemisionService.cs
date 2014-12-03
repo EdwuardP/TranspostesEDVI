@@ -11,5 +11,6 @@ namespace Edvi.Interfaces.Service
     {
         //GuiaRemision GetFromGuiaRemisionById(Int32 id);
         void AddGuiaRemision(GuiaRemision guiaRemision);
+        IList<GuiaRemision> AllGuiaRemision();
     }
 }

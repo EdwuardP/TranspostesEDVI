@@ -23,7 +23,6 @@ namespace Edvi.Services.Service
             database.SaveChanges();
         }
 
-
         public IList<Models.Model.Cliente> AllCliente()
         {
             return database.Clientes.ToList();

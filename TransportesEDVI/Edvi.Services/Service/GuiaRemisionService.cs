@@ -20,5 +20,10 @@ namespace Edvi.Services.Service
             database.GuiaRemisions.Add(guiaRemision);
             database.SaveChanges();
         }
+
+        public IList<Models.Model.GuiaRemision> AllGuiaRemision()
+        {
+            return database.GuiaRemisions.ToList();
+        }
     }
 }
