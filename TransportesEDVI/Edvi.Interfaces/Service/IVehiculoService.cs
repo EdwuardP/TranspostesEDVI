@@ -10,6 +10,7 @@ namespace Edvi.Interfaces.Service
     {
         //Vehiculo GetFromVehiculoById(Int32 id);
         void AddVehiculo(Vehiculo vehiculo);
+        IList<Vehiculo> AllVehiculo();
    
     }
 }

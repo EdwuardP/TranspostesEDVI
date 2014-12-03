@@ -56,7 +56,7 @@ namespace Edvi.Web.Controllers
             if (ModelState.IsValid)
             {
                 service.AddCliente(cliente);
-                return RedirectToAction("Index");
+                return RedirectToAction("IndexCliente");
             }
             return View("create", cliente);
         }

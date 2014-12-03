@@ -20,5 +20,11 @@ namespace Edvi.Services.Service
             database.Vehiculos.Add(vehiculo);
             database.SaveChanges();
         }
+
+
+        public IList<Models.Model.Vehiculo> AllVehiculo()
+        {
+            return database.Vehiculos.ToList();
+        }
     }
 }
