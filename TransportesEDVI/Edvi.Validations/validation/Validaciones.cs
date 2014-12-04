@@ -34,5 +34,15 @@ namespace Edvi.Validations.validation
         {
             throw new NotImplementedException();
         }
+
+
+        public void ValidateCreateCliente(Models.Model.Cliente cliente,  System.Web.Mvc.ModelStateDictionary modelState )
+        {
+            var ruc = cliente.Ruc;
+            if (ruc.Length!=11)
+            {
+                modelState.AddModelError("Ruc", "El ruc tiene que ser 11 digitos");    
+            }
+        }
     }
 }

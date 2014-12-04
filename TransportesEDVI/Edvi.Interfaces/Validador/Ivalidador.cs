@@ -14,5 +14,6 @@ namespace Edvi.Interfaces.Validador
         void ValidarGuia(GuiaRemision guia);
         void ValidarRuta(Ruta ruta);
         void ValidarVehiculo(Vehiculo vehiculo);
+        void ValidateCreateCliente(Cliente cliente, System.Web.Mvc.ModelStateDictionary modelState);
     }
 }

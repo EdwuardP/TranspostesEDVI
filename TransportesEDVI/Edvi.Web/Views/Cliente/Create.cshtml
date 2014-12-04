@@ -58,6 +58,7 @@
                                 <td><label for="Ruc" class="col-sm-2 glyphicon glyphicon-edit"> RUC</label></td>
                                 <td>
                                     @Html.TextBox("Ruc", "", new {@class = "form-control"})
+                                    @Html.ValidationMessage("Ruc")
                                 </td>
 
                                 <td><label for="RazSocial" class="col-sm-2 glyphicon glyphicon-user"> Razon Social</label></td>

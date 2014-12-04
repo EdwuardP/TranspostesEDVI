@@ -28,7 +28,9 @@ namespace Edvi.Web.Controllers
           public ViewResult IndexVehiculo()
           {
 
-              return View("IndexVehiculo", service.AllVehiculo());
+
+              return View("IndexVehiculo",service.AllVehiculo());
+
           }
 
           [HttpGet]
