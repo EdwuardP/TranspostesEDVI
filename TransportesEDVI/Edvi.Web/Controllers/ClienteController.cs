@@ -52,7 +52,7 @@ namespace Edvi.Web.Controllers
         public ActionResult Create(Cliente cliente)
         {
 
-            //ValidateCreatePost(post);
+            validador.ValidateCreateCliente(cliente, ModelState); 
             if (ModelState.IsValid)
             {
                 service.AddCliente(cliente);

@@ -23,7 +23,7 @@ namespace Edvi.Test.Controller
             var controller = new VehiculoController(mock.Object);
 
             // Act
-            var view = controller.Index();
+            var view = controller.IndexVehiculo();
 
             //Assert
             //mock.Verify(x => x.All(), Times.Once);
