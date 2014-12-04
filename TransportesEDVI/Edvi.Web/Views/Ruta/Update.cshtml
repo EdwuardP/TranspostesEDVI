@@ -4,58 +4,112 @@
     ViewBag.Title = "Update";
 }
 
-<h2>Update</h2>
-
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
 
-    <fieldset>
-        <legend>Ruta</legend>
+    <div class=" container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                @*BANNER*@
+                <br />
+                <section style="background-color: goldenrod">
+                    <div class="panel-heading">
+                        <hgroup>
+                            <h1><b>Actualizar Ruta</b></h1>
+                        </hgroup>
+                        <hr />
+                        <p>
+                            <b>* A continuacion Modifique los campos mostrados</b>
+                        </p>
+                    </div>
+                </section>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Origen)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Origen)
-            @Html.ValidationMessageFor(model => model.Origen)
-        </div>
+                @*SLIDE*@
+                <div id="mySlider" class="carousel slide">
+                    <ol class="carousel-indicators">
+                        <li data-target="#mySlider" data-slide-to="0" class="active"></li>
+                        <li data-target="#mySlider" data-slide-to="1"></li>
+                        <li data-target="#mySlider" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="item active ">
+                            <img alt="First slide" src="~/Images/Ruta1.jpg" />
+                        </div>
+                        <div class="item">
+                            <img alt="Second slide" src="~/Images/Ruta2.jpg" />
+                        </div>
+                        <div class="item">
+                            <img alt="second slide" src="~/Images/Ruta3.jpg" />
+                        </div>
+                    </div>
+                    <a class="left carousel-control" href="#mySlider" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                    <a class="right carousel-control" href="#mySlider" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+                </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Destino)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Destino)
-            @Html.ValidationMessageFor(model => model.Destino)
-        </div>
+                @*FORMULARIO*@
+                <form action="@Url.Action("Update", "Ruta")" method="POST" class="form-horizontal">
+                    <div class="btn panel-primary col-sm-12 " style="background-color: darkkhaki">
+                        <table class="table table-bordered " style="color: black;">
+                            <tr>
+                                <td><label for="Id" class="col-sm-2 glyphicon glyphicon-edit"> Id</label></td>
+                                <td>
+                                    @Html.TextBox("Id", "", new { @class = "form-control" })
+                                </td>
+                            </tr>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Descripcion)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Descripcion)
-            @Html.ValidationMessageFor(model => model.Descripcion)
-        </div>
+                            <tr>
+                                <td><label for="Origen" class="col-sm-2 glyphicon glyphicon-pencil"> Origen</label></td>
+                                <td>
+                                    @Html.TextBox("Origen", "", new { @class = "form-control" })
+                                </td>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Distancia)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Distancia)
-            @Html.ValidationMessageFor(model => model.Distancia)
-        </div>
+                                <td><label for="Destino" class="col-sm-2 glyphicon glyphicon-pencil"> Destino</label></td>
+                                <td>
+                                    @Html.TextBox("Destino", "", new { @class = "form-control" })
+                                </td>
+                            </tr>
 
-        <p>
-            <input type="submit" value="Update" />
-        </p>
-    </fieldset>
+                            <tr>
+                                <td><label for="Distancia" class="col-sm-2 glyphicon glyphicon-pencil"> Distancia</label></td>
+                                <td>
+                                    @Html.TextBox("Distancia", "", new { @class = "form-control" })
+                                </td>
+                                <td><label for="Descripcion" class="col-sm-2 glyphicon glyphicon-comment"> Comentario</label></td>
+                                <td>
+                                    @Html.TextArea("Descripcion", "", new { @class = "form-control" })
+                                </td>
+                            </tr>
+                        </table>
+
+                        <button type="submit" class="btn btn-danger  pull-right">Cancelar</button>
+                        <button type="submit" class="btn btn-success pull-right">Guardar</button>
+
+                    </div>
+                    <div id="contacto" class="panel-body col-sm-12" style="background-color:peru">
+                        <div>
+                            <h6>Oficina Principal</h6>
+                            <p>
+                                Av. El Derby No. 055 - Torre 1, Oficina 301, Urb. Lima Polo and Hunt Club - Santiago de Surco, Lima 33 - Perú<br>
+                                <b>Central:</b> +51 1 706-0400 - <b>Fax:</b> +51 1 706 0420
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="btn panel-default col-sm-12" style="background-color: goldenrod">
+                        <div align="right"><b>Copyright © 2014. Todos los Derechos Reservados. Transportes EDVI EIRL.</b></div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
 }
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
 }
+
+

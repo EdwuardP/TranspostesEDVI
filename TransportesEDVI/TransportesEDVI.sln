@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Edvi.DB", "Edvi.DB\Edvi.DB.csproj", "{FC4EAF4B-4AC5-4A21-9A99-6F25984EA845}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Edvi.Interfaces", "Edvi.Interfaces\Edvi.Interfaces.csproj", "{FA96F7B9-9AAF-4C65-A1B5-5422ACA08346}"

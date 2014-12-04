@@ -232,6 +232,9 @@
     <Content Include="Images\Cliente1.jpg" />
     <Content Include="Images\Cliente2.jpg" />
     <Content Include="Images\Cliente3.jpg" />
+    <Content Include="Images\Contacto1.JPG" />
+    <Content Include="Images\Contacto2.JPG" />
+    <Content Include="Images\Contacto3.jpg" />
     <Content Include="Images\GuiaRemision1.jpg" />
     <Content Include="Images\GuiaRemision2.jpg" />
     <Content Include="Images\GuiaRemision3.jpg" />
@@ -242,6 +245,9 @@
     <Content Include="Images\Ruta1.jpg" />
     <Content Include="Images\Ruta2.jpg" />
     <Content Include="Images\Ruta3.jpg" />
+    <Content Include="Images\Somos1.jpg" />
+    <Content Include="Images\Somos2.jpg" />
+    <Content Include="Images\Somos3.jpg" />
     <Content Include="Images\Vehiculo1.jpg" />
     <Content Include="Images\Vehiculo2.jpg" />
     <Content Include="Images\Vehiculo3.jpg" />

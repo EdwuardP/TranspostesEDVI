@@ -22,7 +22,7 @@ namespace Edvi.Test.Controller
             var controller = new GuiaRemisionController(mock.Object);
 
             // Act
-            var view = controller.Index();
+            var view = controller.IndexGuiaRemision();
 
             //Assert
             //mock.Verify(x => x.All(), Times.Once);

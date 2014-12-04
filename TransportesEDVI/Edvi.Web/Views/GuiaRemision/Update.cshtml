@@ -4,48 +4,114 @@
     ViewBag.Title = "Update";
 }
 
-<h2>Update</h2>
-
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
 
-    <fieldset>
-        <legend>GuiaRemision</legend>
+    <div class=" container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                @*BANNER*@
+                <br />
+                <section style="background-color: goldenrod">
+                    <div class="panel-heading">
+                        <hgroup>
+                            <h1><b>Actualizar Guia de Remision</b> </h1>
+                        </hgroup>
+                        <hr />
+                        <p>
+                            <b>* A continuacion modifique los campos mostrados</b>
+                        </p>
+                    </div>
+                </section>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Nro)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Nro)
-            @Html.ValidationMessageFor(model => model.Nro)
-        </div>
+                @*SLIDE*@
+                <div id="mySlider" class="carousel slide">
+                    <ol class="carousel-indicators">
+                        <li data-target="#mySlider" data-slide-to="0" class="active"></li>
+                        <li data-target="#mySlider" data-slide-to="1"></li>
+                        <li data-target="#mySlider" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img alt="First slide" src="~/Images/GuiaRemision1.jpg" />
+                        </div>
+                        <div class="item">
+                            <img alt="Second slide" src="~/Images/GuiaRemision2.jpg" />
+                        </div>
+                        <div class="item">
+                            <img alt="second slide" src="~/Images/GuiaRemision3.jpg" />
+                        </div>
+                    </div>
+                    <a class="left carousel-control" href="#mySlider" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                    <a class="right carousel-control" href="#mySlider" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+                </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.PesoTotal)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.PesoTotal)
-            @Html.ValidationMessageFor(model => model.PesoTotal)
-        </div>
+                @*FORMULARIO*@
+                <form action="@Url.Action("Update", "GuiaRemision")" method="POST" class="form-horizontal">
+                    <div class="btn panel-primary col-sm-12 " style="background-color: darkkhaki">
+                        <table class="table table-bordered " style="color: black; ">
+                            <tr>
+                                <td><label for="Id" class="col-sm-2 glyphicon glyphicon-edit"> Id</label></td>
+                                <td>
+                                    @Html.TextBox("Id", "", new { @class = "form-control" })
+                                </td>
+                            </tr>
+                            
+                            <tr>
+                                <td><label for="Nro" class="col-sm-2 glyphicon glyphicon-edit"> Nº Guia</label></td>
+                                <td>
+                                    @Html.TextBox("Nro", "", new { @class = "form-control" })
+                                </td>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Estado)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Estado)
-            @Html.ValidationMessageFor(model => model.Estado)
-        </div>
+                                <td><label for="PesoTotal" class="col-sm-2 glyphicon glyphicon-edit"> Peso Total</label></td>
+                                <td>
+                                    @Html.TextBox("PesoTotal", "", new { @class = "form-control" })
+                                </td>
+                            </tr>
 
-        <p>
-            <input type="submit" value="Update" />
-        </p>
-    </fieldset>
+                            <tr>
+                                <td><label for="Estado" class="col-sm-2 glyphicon glyphicon-tag"> Estado</label></td>
+                                <td>
+                                    @Html.TextBox("Estado", "", new { @class = "form-control" })
+                                </td>
+                            </tr>
+                        </table>
+
+                        <button type="submit" class="btn btn-danger  pull-right">Cancelar</button>
+                        <button type="submit" class="btn btn-success pull-right">Guardar</button>
+
+                    </div>
+                    <div id="contacto" class="panel-body col-sm-12" style="background-color:peru">
+                        <div>
+                            <h6>Oficina Principal</h6>
+                            <p>
+                                Av. El Derby No. 055 - Torre 1, Oficina 301, Urb. Lima Polo and Hunt Club - Santiago de Surco, Lima 33 - Perú<br>
+                                <b>Central:</b> +51 1 706-0400 - <b>Fax:</b> +51 1 706 0420
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="btn panel-default col-sm-12" style="background-color: palegoldenrod">
+                        <div align="right">Copyright © 2014. Todos los Derechos Reservados. Transportes EDVI EIRL.</div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
 }
 
+
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @*@Html.ActionLink("Back", "Index")*@
+</div>
+
+<div class="editor-field">
+    @*@Html.EditorFor(model => model.Nro)
+        @Html.ValidationMessageFor(model => model.Nro)*@
 </div>
 
 @section Scripts {

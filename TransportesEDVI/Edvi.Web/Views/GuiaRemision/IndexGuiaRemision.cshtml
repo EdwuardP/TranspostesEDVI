@@ -56,10 +56,10 @@
             @foreach (var item in Model)
             {
                 <tr>
-                    <td>@item.Nro</td>
-                    <td>@item.PesoTotal</td>
-                    <td>@item.Estado</td>
-                    <td>
+                    <td class="btn-warning">@item.Nro</td>
+                    <td class="btn-warning">@item.PesoTotal</td>
+                    <td class="btn-warning">@item.Estado</td>
+                    <td class="btn-warning">
                         <a href="@Url.Action("Update", "GuiaRemision", new { id = item.Id })">Editar</a> |
                         <a href="@Url.Action("remove", new { Id = item.Id})">Eliminar</a>
                     </td>

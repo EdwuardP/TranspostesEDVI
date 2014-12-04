@@ -42,7 +42,7 @@
     </form>
 
     @*LISTA*@
-    <table class="table table-striped table-hover">
+    <table class="table table-striped table-hover ">
         <thead>
             <tr>
                 <th>Ruc</th>
@@ -57,13 +57,13 @@
             @foreach (var item in Model)
             {
                 <tr>
-                    <td>@item.Ruc</td>
-                    <td>@item.RazSocial</td>
-                    <td>@item.Direccion</td>
-                    <td>@item.Telefono</td>
-                    <td>
-                        <a href="@Url.Action("Update", "Cliente", new{id = item.Id})">Editar</a> |
-                        <a href="@Url.Action("Remove", new { Id = item.Id})">Eliminar</a>
+                    <td class="btn-warning">@item.Ruc</td>
+                    <td class="btn-warning">@item.RazSocial</td>
+                    <td class="btn-warning">@item.Direccion</td>
+                    <td class ="btn-warning">@item.Telefono</td>
+                    <td class="btn-warning">
+    <a href="@Url.Action("Update", "Cliente", new{id = item.Id})">Editar</a> |
+    <a href="@Url.Action("Remove", new { Id = item.Id})">Eliminar</a>
                     </td>
                 </tr>
             }

@@ -23,7 +23,7 @@ namespace Edvi.Test.Controller
             var controller = new ClienteController(mock.Object,mockvalidacion.Object);
 
             // Act
-            var view = controller.Index();
+            var view = controller.IndexCliente();
 
             //Assert
             //mock.Verify(x => x.All(), Times.Once);

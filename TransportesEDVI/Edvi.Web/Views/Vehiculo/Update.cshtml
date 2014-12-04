@@ -4,105 +4,143 @@
     ViewBag.Title = "Update";
 }
 
-<h2>Update</h2>
-
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
 
-    <fieldset>
-        <legend>Vehiculo</legend>
+    <div class=" container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                @*BANNER*@
+                <br />
+                <section style="background-color: goldenrod">
+                    <div class="panel-heading">
+                        <hgroup>
+                            <h1><b>Actualizar Vehiculo</b> </h1>
+                        </hgroup>
+                        <hr />
+                        <p>
+                            <b>* A continuacion modifique los campos mostrados</b>
+                        </p>
+                    </div>
+                </section>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.PlacaVehiculo)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.PlacaVehiculo)
-            @Html.ValidationMessageFor(model => model.PlacaVehiculo)
-        </div>
+                @*SLIDE*@
+                <div id="mySlider" class="carousel slide">
+                    <ol class="carousel-indicators">
+                        <li data-target="#mySlider" data-slide-to="0" class="active"></li>
+                        <li data-target="#mySlider" data-slide-to="1"></li>
+                        <li data-target="#mySlider" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img alt="First slide" src="~/Images/Vehiculo1.jpg" />
+                        </div>
+                        <div class="item">
+                            <img alt="Second slide" src="~/Images/Vehiculo2.jpg" />
+                        </div>
+                        <div class="item">
+                            <img alt="second slide" src="~/Images/Vehiculo3.jpg" />
+                        </div>
+                    </div>
+                    <a class="left carousel-control" href="#mySlider" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+                    <a class="right carousel-control" href="#mySlider" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+                </div>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Marca)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Marca)
-            @Html.ValidationMessageFor(model => model.Marca)
-        </div>
+                @*FORMULARIO*@
+                <form action="@Url.Action("Update", "Vehiculo")" method="POST" class="form-horizontal">
+                    <div class="btn panel-primary col-sm-12 " style="background-color: darkkhaki">
+                        <table class="table table-bordered " style="color: black;">
+                            <tr>
+                                <td><label for="Id" class="col-sm-2 glyphicon glyphicon-edit"> Id</label></td>
+                                <td>
+                                    @Html.TextBox("Id", "", new { @class = "form-control" })
+                                </td>
+                            </tr>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.PlacaCarreta)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.PlacaCarreta)
-            @Html.ValidationMessageFor(model => model.PlacaCarreta)
-        </div>
+                            <tr>
+                                <td><label for="PlacaVehiculo" class="col-sm-2 glyphicon glyphicon-edit"> Placa Vehiculo</label></td>
+                                <td>
+                                    @Html.TextBox("PlacaVehiculo", "", new { @class = "form-control" })
+                                </td>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Modelo)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Modelo)
-            @Html.ValidationMessageFor(model => model.Modelo)
-        </div>
+                                <td><label for="PlacaCarreta" class="col-sm-2 glyphicon glyphicon-edit"> Placa Carreta</label></td>
+                                <td>
+                                    @Html.TextBox("PlacaCarreta", "", new { @class = "form-control" })
+                                </td>
+                            </tr>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.CertInscripcion)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.CertInscripcion)
-            @Html.ValidationMessageFor(model => model.CertInscripcion)
-        </div>
+                            <tr>
+                                <td><label for="Marca" class="col-sm-2 glyphicon glyphicon-tag"> Marca</label></td>
+                                <td>
+                                    @Html.TextBox("Marca", "", new { @class = "form-control" })
+                                </td>
+                                <td><label for="Modelo" class="col-sm-2 glyphicon glyphicon-tag"> Modelo</label></td>
+                                <td>
+                                    @Html.TextBox("Modelo", "", new { @class = "form-control" })
+                                </td>
+                            </tr>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.ConfVehicular)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.ConfVehicular)
-            @Html.ValidationMessageFor(model => model.ConfVehicular)
-        </div>
+                            <tr>
+                                <td><label for="CertInscripcion" class="col-sm-2 glyphicon glyphicon-pencil"> Certificado Inscripcion</label></td>
+                                <td>
+                                    @Html.TextBox("CertInscripcion", "", new { @class = "form-control" })
+                                </td>
+                                <td><label for="ConfVehicular" class="col-sm-2 glyphicon glyphicon-pencil"> Configuracion Vehicular</label></td>
+                                <td>
+                                    @Html.TextBox("ConfVehicular", "", new { @class = "form-control" })
+                                </td>
+                            </tr>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.FecVenSoat)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.FecVenSoat)
-            @Html.ValidationMessageFor(model => model.FecVenSoat)
-        </div>
+                            <tr>
+                                <td><label for="FecVenSoat" class="col-sm-2 glyphicon glyphicon-calendar"> Fecha Vencimiento Soat</label></td>
+                                <td>
+                                    @Html.TextBox("FecVenSoat", "", new { @class = "form-control" })
+                                </td>
+                                <td><label for="FecUltRevTecnica" class="col-sm-2 glyphicon glyphicon-calendar"> Fecha Ultima Revision</label></td>
+                                <td>
+                                    @Html.TextBox("FecUltRevTecnica", "", new { @class = "form-control" })
+                                </td>
+                            </tr>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.FecUltRevTecnica)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.FecUltRevTecnica)
-            @Html.ValidationMessageFor(model => model.FecUltRevTecnica)
-        </div>
+                            <tr>
+                                <td><label for="CargaBruta" class="col-sm-2 glyphicon glyphicon-edit"> Carga Bruta</label></td>
+                                <td>
+                                    @Html.TextBox("CargaBruta", "", new { @class = "form-control" })
+                                </td>
+                                <td><label for="Estado" class="col-sm-2 glyphicon glyphicon-tag"> Estado</label></td>
+                                <td>
+                                    @Html.TextBox("Estado", "", new { @class = "form-control" })
+                                </td>
+                            </tr>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.CargaBruta)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.CargaBruta)
-            @Html.ValidationMessageFor(model => model.CargaBruta)
-        </div>
+                        </table>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Estado)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Estado)
-            @Html.ValidationMessageFor(model => model.Estado)
-        </div>
+                        <button type="submit" class="btn btn-danger  pull-right">Cancelar</button>
+                        <button type="submit" class="btn btn-success pull-right">Guardar</button>
 
-        <p>
-            <input type="submit" value="Update" />
-        </p>
-    </fieldset>
+                    </div>
+                    <div id="contacto" class="panel-body col-sm-12" style="background-color:peru">
+                        <div>
+                            <h6>Oficina Principal</h6>
+                            <p>
+                                Av. El Derby No. 055 - Torre 1, Oficina 301, Urb. Lima Polo and Hunt Club - Santiago de Surco, Lima 33 - Perú<br>
+                                <b>Central:</b> +51 1 706-0400 - <b>Fax:</b> +51 1 706 0420
+                            </p>
+                        </div>
+
+                    </div>
+                    <div class="btn panel-default col-sm-12" style="background-color: palegoldenrod">
+                        <div align="right">Copyright © 2014. Todos los Derechos Reservados. Transportes EDVI EIRL.</div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
 }
-
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
