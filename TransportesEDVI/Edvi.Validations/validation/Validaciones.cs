@@ -43,6 +43,7 @@ namespace Edvi.Validations.validation
             {
                 modelState.AddModelError("Ruc", "El ruc tiene que ser 11 digitos");    
             }
+            
         }
     }
 }
