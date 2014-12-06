@@ -11,11 +11,19 @@ using Edvi.Models.Model;
 namespace Edvi.DB.DB
 {
     public  class Databases : DbContext
-    {   //public DbSet
+    {
+        //public Databases()
+        //{
+        //    Database.SetInitializer<Databases>(null);
+        //    Database.SetInitializer<Databases>(new CreateDatabaseIfNotExists<Databases>());
+        //}
+        //public DbSet
+
         public virtual IDbSet<Cliente> Clientes { get; set; }
         public virtual IDbSet<Ruta> Rutas { get; set; }
         public virtual IDbSet<Vehiculo> Vehiculos { get; set; }
         public virtual IDbSet<GuiaRemision> GuiaRemisions { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
         base.OnModelCreating(modelBuilder);

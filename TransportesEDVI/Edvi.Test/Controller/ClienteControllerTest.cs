@@ -70,14 +70,17 @@ namespace Edvi.Test.Controller
             var mock = new Mock<IClienteService>();
             var mockValidacion = new Mock<Ivalidador>();
 
-            var controller = new ClienteController(mock.Object,mockValidacion.Object);
+            var controller = new ClienteController(mock.Object, mockValidacion.Object);
 
             var view = controller.Create(new Cliente()) as ViewResult;
             var valido = controller.CreateValidado(new Cliente()) as ViewResult;
 
             AssertViewsWithModel(view, "Create");
+            AssertViewsWithModel(valido, "Create");
+            Assert.IsInstanceOf(typeof(Cliente), valido.Model);
             Assert.IsInstanceOf(typeof(Cliente), view.Model);
         }
+
 
 
         private void AssertViewsWithModel(ViewResult view, string viewName)
